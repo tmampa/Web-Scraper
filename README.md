@@ -1,8 +1,8 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# WEB SCRAPER: COURSEA FREE COURSES
+# WEB SCRAPER: COURSERA FREE COURSES
 
-This tool scrapes the Coursea website and provides free courses. Very convinient and easy to use. Just run it and it will bring all the course titles and which course is offered by which institution. Phew! Saves time, right?
+This tool scrapes the Coursera website and provides free courses. Very convinient and easy to use. Just run it and it will bring all the course titles and which course is offered by which institution. Phew! Saves time, right?
 
 ## Built With
 
