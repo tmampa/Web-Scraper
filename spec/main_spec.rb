@@ -6,5 +6,18 @@ describe Scraper do
       text = Scraper.new
       expect(text.course).not_to be_nil
     end
-
+    it 'String limit 50 words' do
+      text = Scraper.new
+      expect(text.course.size).to be < 50
+    end
+  end
+  describe '#institution' do
+    let(:costs) { Scraper.new }
+    it 'returns course institutions' do
+      expect(costs.institutions).not_to be_nil
+    end
+    it 'Instituions will be more than 0' do
+      expect(costs.institu).not_to eql 0
+    end
+  end
 end
