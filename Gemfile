@@ -7,3 +7,4 @@ gem 'byebug'
 gem 'httparty'
 gem 'nokogiri'
 gem 'watir'
+gem 'webdrivers', '~> 4.0', require: false
