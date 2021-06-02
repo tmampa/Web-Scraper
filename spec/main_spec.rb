@@ -12,12 +12,12 @@ describe Scraper do
     end
   end
   describe '#institution' do
-    let(:costs) { Scraper.new }
+    let(:course) { Scraper.new }
     it 'returns course institutions' do
-      expect(costs.institutions).not_to be_nil
+      expect(course.institutions).not_to be_nil
     end
     it 'Instituions will be more than 0' do
-      expect(costs.institutions).not_to eql 0
+      expect(course.institutions).not_to eql 0
     end
   end
 end
