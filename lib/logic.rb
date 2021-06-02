@@ -9,5 +9,9 @@ class Scraper
     @parse_page ||= Nokogiri::HTML(doc.body)
   end
 
+  def p_names
+    title.map(&:text)
+  end
 
+  
 end
