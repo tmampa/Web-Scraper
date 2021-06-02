@@ -1,5 +1,6 @@
 require 'httparty'
 require 'nokogiri'
+require 'watir'
 
 class Scraper
   attr_accessor :parse_page
