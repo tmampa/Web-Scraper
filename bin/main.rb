@@ -1,12 +1,11 @@
 # !/usr/bin/ruby
 
-require_relative './lib/logic'
+require '../lib/logic'
 
 scraper = Scraper.new
-names = scraper.p_names
-prices = scraper.p_prices
+category = scraper.p_category
+counter = scraper.p_counter
 
-(0...prices.size).each do |index|
-  puts "--- index: #{index + 1} ---"
-  puts "Name: #{names[index]} | Price: #{prices[index]}"
+(0...counter.size).each do |index|
+  puts "Category: #{category[index]} | Counter: #{counter[index]}"
 end
