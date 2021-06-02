@@ -3,9 +3,9 @@
 require '../lib/logic'
 
 scraper = Scraper.new
-category = scraper.p_category
-counter = scraper.p_counter
+course = scraper.course
+institution = scraper.institution
 
-(0...counter.size).each do |index|
-  puts "Vehile: #{category[index]} | Price: #{counter[index]}"
+(0...institution.size).each do |index|
+  puts "Course: #{course[index]} | Institution: #{institution[index]}"
 end
