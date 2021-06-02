@@ -1,13 +1,12 @@
 require 'httparty'
 require 'nokogiri'
-require 'watir'
 
 class Scraper
   attr_accessor :parse_page
 
   def initialize
-    doc = HTTParty.get('https://sacoronavirus.co.za/')
-    @parse_page ||= Nokogiri::HTML(doc.body)
+    web = HTTParty.get('https://sacoronavirus.co.za/')
+    @parse_page ||= Nokogiri::HTML(web.body)
   end
 
   def p_category
