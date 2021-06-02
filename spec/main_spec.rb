@@ -1,14 +1,14 @@
-require '../bin/main'
+require './bin/main'
 
 describe Scraper do
   describe '#courses' do
     it 'returns course name' do
-      courses = Scraper.new
-      expect(courses.courses).not_to be_nil
+      text = Scraper.new
+      expect(text.course).not_to be_nil
     end
     it 'String limit 50 words' do
-      courses = Scraper.new
-      expect(courses.courses.size).to be < 50
+      text = Scraper.new
+      expect(text.course.size).to be < 50
     end
   end
   describe '#institution' do
