@@ -13,5 +13,7 @@ class Scraper
     title.map(&:text)
   end
 
-  
+  def p_prices
+    cost.map(&:text)
+  end
 end
