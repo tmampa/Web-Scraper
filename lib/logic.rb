@@ -16,4 +16,8 @@ class Scraper
   def p_prices
     cost.map(&:text)
   end
+
+  def title
+    parse_page.css('.product-card__title')
+  end
 end
