@@ -14,14 +14,14 @@ class Scraper
   end
 
   def p_counter
-    cost.map(&:text)
+    numbers.map(&:text)
   end
 
   def title
     parse_page.css('.counter-box-content')
   end
 
-  def cost
-    parse_page.css('.display-counter')
+  def numbers
+    parse_page.css('.content-box-counter')
   end
 end
