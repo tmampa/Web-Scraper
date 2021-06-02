@@ -5,23 +5,23 @@ class Scraper
   attr_accessor :parse_page
 
   def initialize
-    doc = HTTParty.get('http://www.nike.com/w/mens-nike-by-you-lifestyle-shoes-13jrmz6ealhznik1zy7ok')
+    doc = HTTParty.get('https://sacoronavirus.co.za/')
     @parse_page ||= Nokogiri::HTML(doc.body)
   end
 
-  def p_names
+  def p_category
     title.map(&:text)
   end
 
-  def p_prices
+  def p_counter
     cost.map(&:text)
   end
 
   def title
-    parse_page.css('.product-card__title')
+    parse_page.css('.counter-box-content')
   end
 
   def cost
-    parse_page.css('.product-card__price')
+    parse_page.css('.display-counter')
   end
 end
