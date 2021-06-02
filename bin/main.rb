@@ -1,6 +1,6 @@
 # !/usr/bin/ruby
 
-require '../lib/logic'
+require './lib/logic'
 
 scraper = Scraper.new
 course = scraper.course
