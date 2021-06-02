@@ -20,4 +20,8 @@ class Scraper
   def title
     parse_page.css('.product-card__title')
   end
+
+  def cost
+    parse_page.css('.product-card__price')
+  end
 end
