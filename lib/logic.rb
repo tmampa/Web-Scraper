@@ -10,18 +10,18 @@ class Scraper
   end
 
   def course
-    title.map(&:text)
+    institutions.map(&:text)
   end
 
   def institution
-    numbers.map(&:text)
+    courses.map(&:text)
   end
 
-  def title
+  def institutions
     parse_page.css('.headline-1-text')
   end
 
-  def numbers
+  def courses
     parse_page.css('.partner-name')
   end
 end
