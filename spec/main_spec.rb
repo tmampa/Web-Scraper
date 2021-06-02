@@ -17,7 +17,7 @@ describe Scraper do
       expect(costs.institutions).not_to be_nil
     end
     it 'Instituions will be more than 0' do
-      expect(costs.institu).not_to eql 0
+      expect(costs.institution).not_to eql 0
     end
   end
 end
