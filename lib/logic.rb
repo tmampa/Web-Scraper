@@ -5,23 +5,23 @@ class Scraper
   attr_accessor :parse_page
 
   def initialize
-    web = HTTParty.get('https://www.autopedigree.co.za/search.php?carMake=&carModel=&carPrice=&carBranch=&page=1&search=Find+a+Car')
+    web = HTTParty.get('https://www.coursera.org/courses?query=free')
     @parse_page ||= Nokogiri::HTML(web.body)
   end
 
-  def p_category
+  def course
     title.map(&:text)
   end
 
-  def p_counter
+  def institution
     numbers.map(&:text)
   end
 
   def title
-    parse_page.css('.vehicle_title')
+    parse_page.css('.headline-1-text')
   end
 
   def numbers
-    parse_page.css('.vehicle-price')
+    parse_page.css('.partner-name')
   end
 end
