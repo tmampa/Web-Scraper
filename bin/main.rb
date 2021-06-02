@@ -7,5 +7,5 @@ category = scraper.p_category
 counter = scraper.p_counter
 
 (0...counter.size).each do |index|
-  puts "Category: #{category[index]} | Counter: #{counter[index]}"
+  puts "Vehile: #{category[index]} | Price: #{counter[index]}"
 end

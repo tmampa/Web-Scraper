@@ -5,7 +5,7 @@ class Scraper
   attr_accessor :parse_page
 
   def initialize
-    web = HTTParty.get('https://sacoronavirus.co.za/')
+    web = HTTParty.get('https://www.autopedigree.co.za/search.php?carMake=&carModel=&carPrice=&carBranch=&page=1&search=Find+a+Car')
     @parse_page ||= Nokogiri::HTML(web.body)
   end
 
@@ -18,10 +18,10 @@ class Scraper
   end
 
   def title
-    parse_page.css('.counter-box-content')
+    parse_page.css('.vehicle_title')
   end
 
   def numbers
-    parse_page.css('.content-box-counter')
+    parse_page.css('.vehicle-price')
   end
 end
